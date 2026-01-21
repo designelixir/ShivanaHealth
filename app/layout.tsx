@@ -16,12 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="7mYdN4dUSPXWY1coeCwcFA" async></script>
+      </head>
       <body>
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="7mYdN4dUSPXWY1coeCwcFA"
-          strategy="afterInteractive"
-        />
+        
         {children}
         <Footer></Footer>
       </body>
