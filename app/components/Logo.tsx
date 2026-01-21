@@ -8,6 +8,7 @@ export default function Logo({ onAnimationComplete }: { onAnimationComplete?: ()
     const logoIconRef = useRef<HTMLDivElement>(null)
     const logoTopRef = useRef<HTMLSpanElement>(null)
     const logoBottomRef = useRef<HTMLSpanElement>(null)
+    const taglineRef = useRef<HTMLHeadingElement>(null)
 
     useEffect(() => {
         const tl = gsap.timeline({
@@ -21,8 +22,9 @@ export default function Logo({ onAnimationComplete }: { onAnimationComplete?: ()
         const topText = logoTopRef.current
         const bottomText = logoBottomRef.current
         const logoIcon = logoIconRef.current
+        const tagline = taglineRef.current
 
-        if (!topText || !bottomText || !logoIcon) return
+        if (!topText || !bottomText || !logoIcon || !tagline) return
 
         // Wrap each letter in a span
         topText.innerHTML = topText.textContent?.split('').map(char => 
@@ -37,7 +39,7 @@ export default function Logo({ onAnimationComplete }: { onAnimationComplete?: ()
         const bottomLetters = bottomText.querySelectorAll('.letter')
 
         // Set initial states
-        gsap.set([topLetters, bottomLetters], { opacity: 0, y: -20 })
+        gsap.set([topLetters, bottomLetters, tagline], { opacity: 0, y: -20 })
         gsap.set(logoIcon, { opacity: 0, y: 50 })
 
         // Animate logo icon first (from below with fade)
@@ -62,6 +64,13 @@ export default function Logo({ onAnimationComplete }: { onAnimationComplete?: ()
             stagger: 0.08,
             ease: 'power2.out',
         }, '-=0.3')
+        // Animate tagline last
+        .to(tagline, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power2.out',
+        }, '-=0.2')
     }, [onAnimationComplete])
 
     return(
@@ -69,10 +78,11 @@ export default function Logo({ onAnimationComplete }: { onAnimationComplete?: ()
             <div ref={logoIconRef}>
                 <Image src="/shivana-health-icon.svg" alt="Shivana Health logo icon" height={200} width={200}/>
             </div>
-            <h1 className="logo-title">
-                <span ref={logoTopRef} className="logo-top">Shivana</span> <br />
+            <h1 className="logo-title" style={{ overflow: 'visible' }}>
+                <span ref={logoTopRef} className="logo-top" >Shivana</span> <br />
                 <span ref={logoBottomRef} className="logo-bottom">Health</span>
             </h1>
+            <h3 ref={taglineRef} className='cream-text no-text-spacing tagline' > Transform Pain Into Purpose </h3>
         </div>
     )
 }
