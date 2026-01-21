@@ -13,7 +13,7 @@ export default function Footer(){
                     <Link href="/contact" target="_blank" className="no-link-styling">
                         <button className="copper-button">Contact Us</button>
                     </Link>
-                    <p className="cream-text right-text">Send us a DM <Link href="https://www.instagram.com/shivanahealth" target="_blank">@shivanahealth</Link>  Include your first name, location and background of your injury/pain. </p>
+                    
                 </div>
             </div>
             <div className="flex-center-center flex-column basic-padding green-gradient-reverse full-width">
