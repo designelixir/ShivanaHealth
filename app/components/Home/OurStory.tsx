@@ -61,15 +61,15 @@ export default function OurStory(){
     return(
         <section className="flex-start-start bio-pic-container light-green-bg">
             <div ref={bioPicRef} className="bio-pic-wrapper basic-padding cream-bg">
-                <div className="bio-pic flex-center-center">photo here</div>
+                <div className="bio-pic flex-center-center"></div>
             </div>
             <div className="basic-padding bio-pic-text">
                 <h2 ref={h2Ref} className="cream-text">Our Story</h2>
-                <h3 ref={h3FirstRef} className="cream-text">We were born out of a growing and unavoidable knowledge that our health and wellness systems are broken. The health industrial complex requires we go through a fundamentally ignorant, insurance as a gatekeeper system. And purely medical ideology born out of this system leaves much critical knowledge and root cause treatment out of the equation. </h3>
-                <h3 ref={h3SecondRef} className="cream-text">Shivana Health operates outside of this system and provides an innovative framework integrating clinical science, research backed recommendations as well as holistic techniques and intuitive healing principles to achieve complete function. </h3>
-                <Link href="https://www.instagram.com/shivanahealth" target="_blank" className="no-link-styling">
-                    <button ref={buttonRef} className="copper-button">Contact Shivana</button>
-                </Link>
+                <h3 ref={h3FirstRef} className="cream-text">Shivana Health was born out of a growing and unavoidable knowledge that our health and wellness systems are lacking. The health industrial complex requires we go through a fundamentally ignorant system in which insurance corporations are the gatekeepers of care. Even more alarming is that medical ideology born out of this system leaves much critical knowledge and root cause treatment out of the equation completely. Our current wellness culture often emphasizes trends and fails to provide proper context and rigor in it's claims. </h3>
+                <h3 ref={h3SecondRef} className="cream-text">We aim to operate outside of this system and provide an innovative framework integrating clinical science, research backed recommendations with holistic techniques and intuitive healing principles. Our founder, Dr Shivana Krishnan carries with her 15 years of experience, a clinical doctorate in physical therapy from Emory University, extensive education in neuroscience, neuropsychology and function medicine, and is shaped and inspired by the values instilled by her Indian-Hindu heritage that contains so much intuitive wisdom within it.</h3>
+                <Link href="/contact" target="_blank" className="no-link-styling">
+                        <button className="copper-button">Contact Us</button>
+                    </Link>
             </div>
         </section>
     )

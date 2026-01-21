@@ -3,17 +3,19 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from "next/image"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Services(){
+export default function OurServices(){
     const h2Ref = useRef<HTMLHeadingElement>(null)
+    const h3Ref = useRef<HTMLHeadingElement>(null)
     const card1Ref = useRef<HTMLDivElement>(null)
     const card2Ref = useRef<HTMLDivElement>(null)
     const card3Ref = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        if (!h2Ref.current || !card1Ref.current || !card2Ref.current || !card3Ref.current) return
+        if (!h2Ref.current || !h3Ref.current || !card1Ref.current || !card2Ref.current || !card3Ref.current) return
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -24,7 +26,7 @@ export default function Services(){
         })
 
         // Set initial states
-        gsap.set([h2Ref.current, card1Ref.current, card2Ref.current, card3Ref.current], { opacity: 0 })
+        gsap.set([h2Ref.current, h3Ref.current, card1Ref.current, card2Ref.current, card3Ref.current], { opacity: 0 })
 
         // Animate sequence
         tl.to(h2Ref.current, {
@@ -32,6 +34,11 @@ export default function Services(){
             duration: 0.8,
             ease: 'power2.out'
         })
+        .to(h3Ref.current, {
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power2.out'
+        }, '-=0.4')
         .to(card1Ref.current, {
             opacity: 1,
             duration: 0.6,
@@ -50,21 +57,22 @@ export default function Services(){
     }, [])
 
     return(
-        <section className="section-padding cream-bg" id="Services">
-            <h2 ref={h2Ref} className="centered-text">Services</h2>
+        <section className="section-padding cream-bg">
+            <h2 ref={h2Ref} className="copper-text">Our Services</h2>
+            
             <div className="flex-start-start card-wrapper">
-                <div ref={card1Ref} className="image-card-wrapper">
-                    <div className="image-card" style={{backgroundImage: 'url("/plants.jpg")'}}> </div>
-                    <h3 className="centered-text">In-Person Evaluation + Program creation </h3>
-                </div>
-                <div ref={card2Ref} className="image-card-wrapper">
-                    <div className="image-card" style={{backgroundImage: 'url("/plants.jpg")'}}> </div>
-                    <h3 className="centered-text">In-Person Treatment Sessions </h3>
-                </div>
-                <div ref={card3Ref} className="image-card-wrapper">
-                    <div className="image-card" style={{backgroundImage: 'url("/plants.jpg")'}}> </div>
-                    <h3 className="centered-text">Virtual Consultations by Request </h3>
-                </div>
+              <div ref={card1Ref} className="card copper-card flex-start-start flex-column">
+                <Image src="/analyze.svg" height={50} width={50} alt="DNA icon"/>
+                <p>In-Person Evaluation + Program Creation</p>
+              </div>
+              <div ref={card2Ref} className="card copper-card flex-start-start flex-column">
+                <Image src="/treat.svg" height={50} width={50} alt="DNA icon"/>
+                <p>In-Person Treatment Sessions</p>
+              </div>
+              <div ref={card3Ref} className="card copper-card flex-start-start flex-column">
+                <Image src="/virtual.svg" height={50} width={50} alt="DNA icon"/>
+                <p>Virtual Consultations by Request</p>
+              </div>
             </div>
         </section>
     )

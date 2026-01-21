@@ -10,7 +10,9 @@ export default function Footer(){
                     <Image src="/shivana-health-logo-wide.svg" height={100} width={300} alt="Shivana Health Logo"/>
                 </div>
                 <div className="flex-end-end footer-contact full-width flex-column">
-                    <button className="copper-button">Contact Us</button>
+                    <Link href="/contact" target="_blank" className="no-link-styling">
+                        <button className="copper-button">Contact Us</button>
+                    </Link>
                     <p className="cream-text right-text">Send us a DM <Link href="https://www.instagram.com/shivanahealth" target="_blank">@shivanahealth</Link>  Include your first name, location and background of your injury/pain. </p>
                 </div>
             </div>

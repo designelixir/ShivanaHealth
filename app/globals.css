@@ -70,7 +70,7 @@ body {width: 100%; margin: 0px}
 .hidden-scrollbar::-webkit-scrollbar {display: none; /* Chrome, Safari, and Edge */}
 
 
-h1 { font-size: clamp(36px, 2vw + 1.2rem, 48px); line-height: clamp(40px, 2vw + 1.3rem, 52px) }
+h1 {font-family: var(--header-font); font-size: clamp(36px, 2vw + 1.2rem, 48px); line-height: clamp(40px, 2vw + 1.3rem, 52px) }
 h2 {font-family: var(--header-font); font-size: clamp(36px, 5vw, 52px); line-height: 1.25; margin: 15px 0; font-weight: 100;}
 h3 {font-family: var(--reader-font); font-size: 24px; font-weight: 300; line-height: 1.5;}
 p {font-family: var(--reader-font); font-weight: 200; font-size: 18px;}
@@ -130,7 +130,7 @@ button:hover {border: 2px solid var(--cream);}
 /* Bio Pic */
 
 .bio-pic-wrapper {width: 50vw; min-width: 500px; aspect-ratio: 3/4; margin: 50px 0; border-radius: 0 8px 8px 0;}
-.bio-pic {background: var(--dark-green); aspect-ratio: 3/4; width: 100%;}
+.bio-pic {background-image: url('/shivana.png'); aspect-ratio: 3/4; width: 100%; background-size: cover}
 .bio-pic-text {padding: 50px 25px;}
 
 @media (max-width: 975px) {

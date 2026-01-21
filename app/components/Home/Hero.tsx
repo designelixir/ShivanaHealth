@@ -32,7 +32,7 @@ export default function Hero(){
                 </div>
                 
                 <div ref={buttonContainerRef} className="flex-center-center button-container no-flex-grow" style={{paddingTop: '50px'}}>
-                    <Link href="https://www.instagram.com/shivanahealth" target="_blank" className="no-link-styling">
+                    <Link href="/contact" target="_blank" className="no-link-styling">
                         <button className="copper-button">Contact Us</button>
                     </Link>
                     <Link href="#Services" className="no-link-styling">
