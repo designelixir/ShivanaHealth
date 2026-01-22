@@ -11,7 +11,7 @@ export default function Footer(){
                 </div>
                 <div className="flex-end-end footer-contact full-width flex-column">
                     <Link href="/contact" target="_blank" className="no-link-styling">
-                        <button className="copper-button">Contact Us</button>
+                        <button className="copper-outline-button">Contact Us</button>
                     </Link>
                     
                 </div>

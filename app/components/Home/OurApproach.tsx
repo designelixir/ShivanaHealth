@@ -63,15 +63,15 @@ export default function OurApproach(){
             <div className="flex-start-start card-wrapper">
               <div ref={card1Ref} className="card copper-card flex-start-start flex-column">
                 <Image src="/dna.svg" height={50} width={50} alt="DNA icon"/>
-                <p>utilizes clinical research-backed physiotherapy principles of body work, tissue prep and corrective exercise to address the root physical cause</p>
+                <p>Utilizes clinical research-backed physiotherapy principles of body work, tissue prep and corrective exercise to address the root physical cause</p>
               </div>
               <div ref={card2Ref} className="card copper-card flex-start-start flex-column">
                 <Image src="/stretch.svg" height={50} width={50} alt="DNA icon"/>
-                <p>implements a functional medicine framework examining the role of 5 dimensions of lifestyle to your condition </p>
+                <p>Implements a functional medicine framework examining the role of 5 dimensions of lifestyle to your condition </p>
               </div>
               <div ref={card3Ref} className="card copper-card flex-start-start flex-column">
                 <Image src="/brain.svg" height={50} width={50} alt="DNA icon"/>
-                <p>integrates neurophysiology, spirituality, eastern techniques and intuition to support your goals</p>
+                <p>Integrates neurophysiology, spirituality, eastern techniques and intuition to support your goals</p>
               </div>
             </div>
         </section>
