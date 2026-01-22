@@ -95,23 +95,20 @@ button:hover {border: 2px solid var(--cream);}
 /* backgrounds */
 .green-gradient { background: #1D3A33; background: linear-gradient(341deg, rgba(29, 58, 51, 1) 40%, rgba(92, 119, 79, 1) 100%); }
 .green-gradient-reverse { background: #1D3A33; background: linear-gradient(171deg, rgba(29, 58, 51, 1) 60%, rgba(92, 119, 79, 1) 100%); }
-.green-gradient-transparent { background: rgba(29, 58, 51, 0.90); background: linear-gradient(341deg, rgba(29, 58, 51, 0.8) 40%, rgba(92, 119, 79, 0.8) 100%); }
+.green-gradient-transparent { background: rgba(29, 58, 51, 0.95); background: linear-gradient(341deg, rgba(29, 58, 51, 0.9) 30%, rgba(92, 119, 79, 0.9) 100%); }
 .cream-bg {background: var(--cream)}
 .dark-green-bg {background: var(--dark-green);}
 .light-green-bg {background: var(--light-green)}
 
-@media screen and (min-width: 480px) {
-}
-
 /* Logo */
 .logo-title { text-transform: uppercase; text-align: center; display: inline-block; overflow: visible;}
-.logo-top {font-family: var(--logo-font); letter-spacing: 20px; color: var(--cream); font-size: 72px; font-weight: 100!important;}
-.logo-bottom {font-family: var(--reader-font); font-weight: 300; font-size: 30px; letter-spacing: 20px; color: var(--cream)}
+.logo-top {font-family: var(--logo-font); letter-spacing: 20px; color: var(--cream); font-size: 65px; font-weight: 100!important;}
+.logo-bottom {font-family: var(--reader-font); font-weight: 300; font-size: 24px; letter-spacing: 20px; color: var(--cream)}
 .logo-title .letter { background: linear-gradient(135deg, var(--cream) 0%, var(--cream) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; min-height: 65px;}
-.tagline {font-family: var(--logo-font); font-size: 32px;}
+.tagline {font-family: var(--logo-font); font-size: 32px; line-height: 1}
 
 /* Home Hero */
-.home-hero {width: 100%; height: 100vh; min-height: 500px;  background-image: url('/plants.jpg'); background-size: cover;}
+.home-hero {width: 100%; height: 100vh; min-height: 500px;  background-image: url('/sandstone.png'); background-size: cover;}
 
 /* Card Wrapper */
 .card-wrapper { display: flex; gap: 25px; width: 100%; align-items: stretch;}

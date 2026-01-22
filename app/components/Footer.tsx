@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Footer(){
     return(
         <footer className="dark-green-bg flex-center-center flex-column ">
-            <div className="flex-start-spacebetween flex-wrap basic-padding">
-                <div className="flex-center-start footer-logo-wrapper">
+            <div className="flex-start-spacebetween full-width flex-wrap basic-padding">
+                <div className="flex-center-start full-width footer-logo-wrapper">
                     <Image src="/shivana-health-logo-wide.svg" height={100} width={300} alt="Shivana Health Logo"/>
                 </div>
                 <div className="flex-end-end footer-contact full-width flex-column">

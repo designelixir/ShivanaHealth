@@ -32,7 +32,7 @@ export default function Logo({ onAnimationComplete }: { onAnimationComplete?: ()
         ).join('') || ''
         
         bottomText.innerHTML = bottomText.textContent?.split('').map(char => 
-            `<span class="letter">${char}</span>`
+            `<span class="letter ">${char}</span>`
         ).join('') || ''
 
         const topLetters = topText.querySelectorAll('.letter')
@@ -74,15 +74,15 @@ export default function Logo({ onAnimationComplete }: { onAnimationComplete?: ()
     }, [onAnimationComplete])
 
     return(
-        <div className="flex-center-center flex-column">
+        <div id="heroLogo" className="flex-center-center flex-column basic-padding">
             <div ref={logoIconRef}>
                 <Image src="/shivana-health-icon.svg" alt="Shivana Health logo icon" height={200} width={200}/>
             </div>
-            <h1 className="logo-title" style={{ overflow: 'visible' }}>
+            <h1 className="logo-title centered-text flex-center-center" style={{ overflow: 'visible' }}>
                 <span ref={logoTopRef} className="logo-top" >Shivana</span> <br />
                 <span ref={logoBottomRef} className="logo-bottom">Health</span>
             </h1>
-            <h3 ref={taglineRef} className='cream-text no-text-spacing tagline' > Transform Pain Into Purpose </h3>
+            <h3 ref={taglineRef} className='cream-text no-text-spacing centered-text tagline' > Transform Your Pain Into Purpose </h3>
         </div>
     )
 }
